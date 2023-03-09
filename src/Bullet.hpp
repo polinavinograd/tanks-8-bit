@@ -17,7 +17,7 @@ class Bullet {
     bool alive = true;
   public:
     Bullet(Map *map, Player *p, std::string filename, float x_pos, float y_pos, float bullet_width, float bullet_height, int dir) : dir(dir), map(map), player(p){
-      bullet_img.loadFromFile("../img/" + filename);
+      bullet_img.loadFromFile("img/" + filename);
       bullet_img.createMaskFromColor(sf::Color(255, 255, 255));
       bullet_texture.loadFromImage(bullet_img);
       bullet_sprite.setTexture(bullet_texture);

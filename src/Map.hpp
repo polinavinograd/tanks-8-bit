@@ -13,7 +13,7 @@ class Map {
     sf::Sprite map_sprite;
   public:
     Map(std::string filename) {
-      std::ifstream in("../" + filename);
+      std::ifstream in(filename);
       if (in.is_open()) {
         for (int i = 0;i < MAP_HEIGHT;i++) {
           std::string buf;
@@ -22,7 +22,7 @@ class Map {
         }
       } else throw std::invalid_argument("Can't open map file!");
 
-      map_img.loadFromFile("../img/texture.png");
+      map_img.loadFromFile("img/texture.png");
       map_texture.loadFromImage(map_img);
       map_sprite.setTexture(map_texture);
     }

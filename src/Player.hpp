@@ -19,7 +19,7 @@ class Player {
     float default_cooldown;
   public:
     Player(Map &new_map, std::string filename, float x_pos, float y_pos, float player_width, float player_height, float default_cooldown) : map(new_map), default_cooldown(default_cooldown) {
-      player_img.loadFromFile("../img/" + filename);
+      player_img.loadFromFile("img/" + filename);
       player_img.createMaskFromColor(sf::Color(255, 255, 255));
       player_texture.loadFromImage(player_img);
       player_sprite.setTexture(player_texture);
